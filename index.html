@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assens/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav class="nav1">
+
+        <div class="nav__container">
+            
+            <figure class="nav__figure">
+                <img src="Assens/img/owl.svg" class="nav__logo">
+            </figure>
+
+            <form action="">
+				<input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+			</form>
+
+            <label class="nav__toggle">
+                <input type="checkbox" id="menu-input" class="nav__input">
+            </label>
+
+            <ul class="nav__list">
+
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="otro/Quienes somos.html" class="nav__link">Nosotros</a>
+                </li>
+                <li class="nav__item">
+                    <a href="otro/contactos.html" class="nav__link">Contactanos</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <h1 class="logo">Ofertas</h1>
+
+
+
+    <div class="contenedor">
+		<header>
+
+        
+			<div class="logo">
+				<h1>Destacados</h1>
+			</div>
+			
+			<div class="categorias" id="categorias">
+				<a href="#" class="activo">Todos</a>
+				<a href="#">Audifonos</a>
+				<a href="#">Cornetas</a>
+                <a href="#">Relog</a>
+			</div>
+		</header>
+
+		<section class="grid" id="grid">
+			<div class="item" 
+				 data-categoria="relog"
+				 data-etiquetas="ciudades autos carros calles"
+				 data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+                    
+					<img src="Assens/img/cat_1/1000094025.png" alt="">
+                    <h3 class="H-3">producto 1</h3>
+                    <p class="p1">detalle</p>
+                    <p class="p2">valor</p>
+                </div>
+			</div>
+
+			<div class="item"
+				 data-categoria="audifonos"
+				 data-etiquetas="personas mujeres"
+				 data-descripcion="2.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="Assens/img/cat_1/1000094027.png" alt="">
+                    <h3 class="H-3">producto 1</h3>
+                    <p class="p1">detalle</p>
+                    <p class="p2">valor</p>
+                </div>
+			</div>
+
+			<div class="item"
+				 data-categoria="audifonos"
+				 data-etiquetas="paisajes montañas mar playas"
+				 data-descripcion="3.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="Assens/img/cat_1/1000094028.png" alt="">
+                    <h3 class="H-3">producto 1</h3>
+                    <p class="p1">detalle</p>
+                    <p class="p2">valor</p>
+                </div>
+			</div>
+
+			<div class="item"
+				 data-categoria="cornetas"
+				 data-etiquetas="animales leones"
+				 data-descripcion="4.- Lorem ipsum dolor sit amet consectetur."
+			>
+				<div class="item-contenido">
+					<img src="Assens/img/cat_1/1000094031.png" alt="">
+                    <h3 class="H-3">producto 1</h3>
+                    <p class="p1">detalle</p>
+                    <p class="p2">valor</p>
+                </div>
+			</div>
+
+		</section>
+
+		<section class="overlay" id="overlay">
+			<div class="contenedor-img">
+				<button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+				<img src="" alt="">
+			</div>
+			<p class="descripcion"></p>
+		</section>
+
+	</div>
+
+	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+	<script src="scripts.js"></script>
+
+
+    
+
+
+
+
+
+    <footer class="footer">
+        
+        <ul class="menu">
+          <li class="menu-elem">
+            <a href="index.html" class="menu-icon"> Inicio </a>
+          </li>
+          <li class="menu-elem">
+            <a href="contactos.html" class="menu-icon"> Contacto </a>
+          </li>
+          <li class="menu-elem">
+            <a href="Quienes somos.html" class="menu-icon"> Sobre Nosotros </a>
+          </li>
+        </ul>
+
+        <ul class="social-icon">
+          <li class="icon-elem">
+            <a href="" class="icon">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+          <li class="icon-elem">
+            <a href="" class="icon">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="icon-elem">
+            <a href="" class="icon">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+          <li class="icon-elem">
+            <a href="" class="icon">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li class="icon-elem">
+            <a href="" class="icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <p class="text">@Año | Todos los derechos reservados</p>
+      </footer>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      ></script>
+
+
+</body>
+</html>
