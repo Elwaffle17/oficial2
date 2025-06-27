@@ -12,8 +12,14 @@
 <body>
 
   <nav>
-    <div class="wrapper">
+    <div class="wrapper_nav">
       <div class="logo3"><a href="#"><img src="Assens/img/owl.svg" alt=""></a></div>
+      
+
+      
+
+
+
       <input type="radio" name="slider" id="menu-btn">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
@@ -77,7 +83,45 @@
       <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
     </div>
   </nav>
+
+
+   
+
+    <div class="container">
+           <div class="header">
+            <button id="search-icon-btn" class="search-icon-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+           </div>
+           <div id="search-wrapper" class="search-wrapper">
+            <input type="text" id="buscador" placeholder="Buscar en el sitio...">
+            <div id="resultados"></div>
+           </div>
+          </div>
+
+
+
+  <div class="cont_carrusel">
+     <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="Assens/img/carrucel/best-samsung-phones-6.jpg" alt="Imagen 1">
+            <img src="Assens/img/carrucel/best-samsung-phones-6.jpg" alt="Imagen 2">
+            <img src="Assens/img/carrucel/best-samsung-phones-6.jpg" alt="Imagen 3">
+            <img src="Assens/img/carrucel/best-samsung-phones-6.jpg" alt="Imagen 4">
+            <img src="Assens/img/carrucel/best-samsung-phones-6.jpg" alt="Imagen 5">
+        </div>
+        <button class="prev-btn">❮</button>
+        <button class="next-btn">❯</button>
+    </div>
+  </div>
+ 
     
+
+
+
     
 
 	<a href="https://wa.me/+57 300672207" class="btn-wsp" target="_blank">
@@ -172,54 +216,71 @@
 
 	</div>
 
-	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
-	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
-	<script src="scripts.js"></script>
+	
 
 
 
-
-
-
-    <div class="container_acordion">
-        <div id="carpeta-uno">
-            <a class="a_acordion" href="#carpeta-uno">Carpeta uno</a>
-            <p class="contenido_acordion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero dolorem voluptate at illum iure aliquid laborum possimus voluptatem ullam.</p>
+  <div class="contenedor_acordeon">
+    <div class="acordeon">
+        <div class="acordeon-item">
+            <div class="acordeon-cabecera">
+                <h3>Productos</h3>
+                <span class="acordeon-icono">&#x276F;</span>
+            </div>
+            <div class="acordeon-contenido">
+                <ul>
+                  <li>
+                    <a href="">Celulares</a>
+                  </li>
+                  <li>
+                    <a href="">Tablets</a>
+                  </li>
+                  <li>
+                    <a href="">Relojes</a>
+                  </li>
+                </ul>
+              </div>
         </div>
-        <div id="carpeta-dos">
-            <a class="a_acordion" href="#carpeta-dos">Carpeta dos</a>
-            <p class="contenido_acordion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero dolorem voluptate at illum iure aliquid laborum possimus voluptatem ullam.</p>
+
+        <div class="acordeon-item">
+            <div class="acordeon-cabecera">
+                <h3>Tienda</h3>
+                <span class="acordeon-icono">&#x276F;</span>
+            </div>
+            <div class="acordeon-contenido">
+                <a href="">Ofertas</a>
+            </div>
         </div>
-        <div id="carpeta-tres">
-            <a class="a_acordion" href="#carpeta-tres">Carpeta tres</a>
-            <p class="contenido_acordion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero dolorem voluptate at illum iure aliquid laborum possimus voluptatem ullam.</p>
-        </div>
-        <div id="carpeta-cuatro">
-            <a class="a_acordion" href="#carpeta-cuatro">Carpeta 4</a>
-            <p class="contenido_acordion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero dolorem voluptate at illum iure aliquid laborum possimus voluptatem ullam.</p>
+
+        <div class="acordeon-item">
+            <div class="acordeon-cabecera">
+                <h3>Sobre Nosotros</h3>
+                <span class="acordeon-icono">&#x276F;</span>
+            </div>
+            <div class="acordeon-contenido">
+                <ul>
+                    <li>Informacion de la compañia</li>
+                </ul>
+            </div>
         </div>
     </div>
 
+  </div>
+
+   
 
 
 
+ <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+	<script src="scripts.js"></script>
+  <script src="scripts2.js"></script>
 
 
 
 
     <footer class="footer">
         
-        <ul class="menu">
-          <li class="menu-elem">
-            <a href="index.html" class="menu-icon"> Inicio </a>
-          </li>
-          <li class="menu-elem">
-            <a href="contactos.html" class="menu-icon"> Contacto </a>
-          </li>
-          <li class="menu-elem">
-            <a href="Quienes somos.html" class="menu-icon"> Sobre Nosotros </a>
-          </li>
-        </ul>
 
         <ul class="social-icon">
           <li class="icon-elem">
