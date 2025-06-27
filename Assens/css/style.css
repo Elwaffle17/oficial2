@@ -291,7 +291,7 @@ nav .wrapper_nav {
     position: fixed;
     height: 100vh;
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
     top: 0;
     right: -100%;
     background: white;
