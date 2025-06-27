@@ -7,6 +7,120 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/*---------------------buscador-------------*/
+/*---------------------buscador-------------*/
+/*---------------------buscador-------------*/
+/*---------------------buscador-------------*/
+
+.container {
+  position: fixed;
+  top: 2%;
+  left: 9%;
+    width: 90%;
+    max-width: 280px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* --- NUEVO: Contenedor del encabezado --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- NUEVO: Estilos para el botón del icono --- */
+.search-icon-btn {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+.search-icon-btn svg {
+    stroke: #333; /* Color del icono */
+}
+
+/* --- Estilos del buscador --- */
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#buscador {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#resultados {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.resultado-item {
+    padding: 12px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.resultado-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* --- MEDIA QUERY PARA MÓVILES --- */
+/* Estos estilos se aplicarán solo si el ancho de la pantalla es de 768px o menos */
+@media (max-width: 768px) {
+    .search-icon-btn {
+        display: block; /* Hacemos visible el icono */
+    }
+
+    .search-wrapper {
+        display: none; /* Ocultamos el buscador por defecto */
+        position: fixed; /* Lo posicionamos sobre el resto del contenido */
+        top: 70px;
+        left: 5%; /* Centrado con un 5% a cada lado */
+        width: 90%;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        z-index: 10; /* Aseguramos que esté por encima de otros elementos */
+      }
+
+    /* Clase que se añadirá con JS para mostrar el buscador */
+    .search-wrapper.active {
+        display: block;
+    }
+
+    .container {
+  position: fixed;
+  top: 2%;
+  left: 60px;
+    width: 90%;
+    text-align: center;
+    z-index: 1000;
+}
+}
+
+
 /*---------------------nav------------------*/
 /*---------------------nav------------------*/
 /*---------------------nav------------------*/
@@ -19,12 +133,12 @@
 nav {
   position: fixed;
   top: 0;
-  z-index: 99;
+  z-index: 1000;
   width: 100%;
   background: white;
 }
 
-nav .wrapper {
+nav .wrapper_nav {
   position: relative;
   max-width: 1300px;
   padding: 0px 30px;
@@ -36,14 +150,14 @@ nav .wrapper {
   justify-content: space-between;
 }
 
-.wrapper .logo3 a {
+.wrapper_nav .logo3 a {
   color: black;
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
 }
 
-.wrapper .nav-links {
+.wrapper_nav .nav-links {
   display: inline-flex;
 }
 
@@ -155,29 +269,29 @@ nav .wrapper {
   color: black;
 }
 
-.wrapper .btn {
+.wrapper_nav .btn {
   color: black;
   font-size: 20px;
   cursor: pointer;
   display: none;
 }
 
-.wrapper .btn.close-btn {
+.wrapper_nav .btn.close-btn {
   position: absolute;
   right: 30px;
   top: 10px;
 }
 
 @media screen and (max-width: 970px) {
-  .wrapper .btn {
+  .wrapper_nav .btn {
     display: block;
   }
 
-  .wrapper .nav-links {
+  .wrapper_nav .nav-links {
     position: fixed;
     height: 100vh;
     width: 100%;
-    max-width: 350px;
+    max-width: 380px;
     top: 0;
     right: -100%;
     background: white;
@@ -203,7 +317,7 @@ nav .wrapper {
 
   #menu-btn:checked~.nav-links {
     right: 0;
-    box-shadow: -300px 0px 0px rgba(0, 0, 0, 0.20);
+    box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.20);
   }
 
   #menu-btn:checked~.btn.menu-btn {
@@ -333,6 +447,86 @@ nav input {
   font-weight: 600;
 }
 
+/*-----------------------carrusel------------------*/
+/*-----------------------carrusel------------------*/
+/*-----------------------carrusel------------------*/
+/*-----------------------carrusel------------------*/
+
+.cont_carrusel {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-container {
+    margin-top: 80px;
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    max-width: 800px;
+    overflow: hidden; /* Hides images outside the view */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+    scroll-behavior: smooth; /* For manual scrolling */
+}
+
+.carousel-slide img {
+    width: 100%; /* Images take full width of the container */
+    height: auto;
+    display: block;
+    flex-shrink: 0; /* Prevents images from shrinking */
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+    z-index: 80;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+    }
+    .prev-btn,
+    .next-btn {
+        padding: 8px 12px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .prev-btn,
+    .next-btn {
+        padding: 5px 10px;
+        font-size: 1em;
+    }
+}
 
 /*---------------------contenido1------------------*/
 /*---------------------contenido1------------------*/
@@ -575,46 +769,92 @@ header .categorias a.activo {
 /*---------------------acordion---------------------*/
 /*---------------------acordion---------------------*/
 
-.container_acordion {
-    width: 40%;
-    z-index: 99;
+
+.contenedor_acordeon {
+  width: 100%;
+  margin: 0;
 }
 
-.container_acordion .a_acordion {
+.acordeon {
+    border-bottom: 1px solid whitesmoke;
+    border-top: 2px solid whitesmoke;
+    margin-bottom: 2px;
     width: 100%;
-    display: block;
-    background-color: #232323;
-    padding: 1rem;
-    text-decoration: none;
-    color: #fff;
-    margin: 5px;
-    border-radius: 10px;
-}
-
-.container_acordion .a_acordion:hover {
-    font-weight: 600;
-}
-
-.contenido_acordion {
     overflow: hidden;
-    max-height: 0;
-    transition: all .5s ease;
-    color: #999999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.container_acordion:target .contenido_acordion {
-    overflow: none;
-    max-height: none;
-    padding: 1rem;
+/* Estilos para cada item del acordeón */
+.acordeon-item {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
 }
 
-@media screen and (max-width:1024px) {
-    .container_acordion {
-        width: 95%;
-    }
+.acordeon-item:last-child {
+    border-bottom: none;
 }
 
+/* Estilos para la cabecera de cada sección */
+.acordeon-cabecera {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            transition: background-color 0.3s ease;
+        }
 
+.acordeon-cabecera:hover {
+            background-color: whitesmoke;
+        }
+
+.acordeon-cabecera h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+/* Estilo para el ícono (flecha) */
+.acordeon-icono {
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+/* Estilos para el contenido de cada sección */
+.acordeon-contenido {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            padding: 0 20px;
+            background-color: #fff;
+        }
+
+.acordeon-contenido p {
+            margin: 15px 0;
+        }
+
+/* Clase que se añade con JavaScript cuando el item está activo/abierto */
+.acordeon-item.activo .acordeon-contenido {
+            max-height: 200px; /* Ajusta esta altura si tu contenido es más grande */
+            padding: 15px 20px;
+        }
+
+.acordeon-item.activo .acordeon-icono {
+            transform: rotate(90deg);
+        }
+
+
+        
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #303030;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
 /*---------------footer---------------*/
 /*---------------footer---------------*/
 /*---------------footer---------------*/
@@ -646,7 +886,7 @@ footer{
     justify-content: center;
     align-items: center;
     position:relative;
-    margin: 10px 5px;
+    margin: 30px 5px 10px 5px;
     flex-wrap: wrap;
     z-index: 1;
   }
