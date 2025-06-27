@@ -5,50 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assens/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
     <title>Document</title>
 </head>
 <body>
+
+  <nav>
+    <div class="wrapper">
+      <div class="logo3"><a href="#"><img src="Assens/img/owl.svg" alt=""></a></div>
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="#">Inicio</a></li>
+        <li>
+          <a href="#">Ofertas</a>
+        </li>
+        <li>
+          <a href="#" class="desktop-item">Productos</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="mobile-item">Productos</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <img src="MDMX_Feature_Card3_560X560.avif" alt="">
+              </div>
     
-    <nav class="nav1">
-
-        <div class="nav__container">
-            
-            <figure class="nav__figure">
-                <img src="Assens/img/owl.svg" class="nav__logo">
-            </figure>
-
-            <form action="">
-				<input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
-			</form>
-
-            <label class="nav__toggle">
-                <input type="checkbox" id="menu-input" class="nav__input">
-            </label>
-
-            <ul class="nav__list">
-
-                <li class="nav__item">
-                    <a href="index.html" class="nav__link">Inicio</a>
-                </li>
-                <li class="nav__item">
-                    <a href="otro/Quienes somos.html" class="nav__link">Nosotros</a>
-                </li>
-                <li class="nav__item">
-                    <a href="otro/contactos.html" class="nav__link">Contactanos</a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </nav>
+              <div class="row">
+                <header class="mega-header">Celulares</header>
+                <ul class="mega-links">
+                  <li>
+                    <a class="product-link" href="#">
+                      Galaxy S</a>
+                  </li>
+                  <li>
+                    <a class="product-link" href="#">
+                      Galaxy A</a>
+                  </li>
+                  <li>
+                    <a class="product-link" href="#">
+                      Galaxy Z</a>
+                  </li>
+                  <li>
+                    <a class="product-link" href="#">
+                      Galaxy J</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="row">
+                <header class="mega-header">Tablets</header>
+                <ul class="mega-links">
+                  <li><a href="#">Galaxy Tab S</a></li>
+                  <li><a href="#">Galaxy Tab A</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header class="mega-header">Relojes</header>
+                <ul class="mega-links">
+                  <li><a href="#">Galaxy Watch</a></li>
+                  <li><a href="#">Galaxy Watch Ultra</a></li>
+                  <li><a href="#">Galaxy Watch Classic</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">Comentarios</a></li>
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+    
+    
 
 	<a href="https://wa.me/+57 300672207" class="btn-wsp" target="_blank">
 	    <img clase="icono_wsp" src="Assens/img/wsp/whatsapp-line.svg" alt="">
 	</a>
 
-    <h1 class="logo">Ofertas</h1>
+    <h1 class="logo2">Ofertas</h1>
 
     
 
@@ -63,16 +99,16 @@
 			</div>
 			
 			<div class="categorias" id="categorias">
-				<a href="#" class="activo">Todos</a>
-				<a href="#">Audifonos</a>
-				<a href="#">Cornetas</a>
-                <a href="#">Relog</a>
+				<a href="#" class="activo" id="filtro">Todos</a>
+				<a href="#" id="filtro">Audífonos</a>
+				<a href="#" id="filtro">Cornetas</a>
+        <a href="#" id="filtro">Reloj</a>
 			</div>
 		</header>
 
 		<section class="grid" id="grid">
 			<div class="item" 
-				 data-categoria="relog"
+				 data-categoria="reloj"
 				 data-etiquetas="ciudades autos carros calles"
 				 data-descripcion="1.- Lorem ipsum dolor sit amet consectetur."
 			>
@@ -99,7 +135,7 @@
 			</div>
 
 			<div class="item"
-				 data-categoria="audifonos"
+				 data-categoria="audífonos"
 				 data-etiquetas="paisajes montañas mar playas"
 				 data-descripcion="3.- Lorem ipsum dolor sit amet consectetur."
 			>
@@ -141,7 +177,31 @@
 	<script src="scripts.js"></script>
 
 
-    
+
+
+
+
+    <div class="container_acordion">
+        <div id="carpeta-uno">
+            <a class="a_acordion" href="#carpeta-uno">Carpeta uno</a>
+            <p class="contenido_acordion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero dolorem voluptate at illum iure aliquid laborum possimus voluptatem ullam.</p>
+        </div>
+        <div id="carpeta-dos">
+            <a class="a_acordion" href="#carpeta-dos">Carpeta dos</a>
+            <p class="contenido_acordion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero dolorem voluptate at illum iure aliquid laborum possimus voluptatem ullam.</p>
+        </div>
+        <div id="carpeta-tres">
+            <a class="a_acordion" href="#carpeta-tres">Carpeta tres</a>
+            <p class="contenido_acordion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero dolorem voluptate at illum iure aliquid laborum possimus voluptatem ullam.</p>
+        </div>
+        <div id="carpeta-cuatro">
+            <a class="a_acordion" href="#carpeta-cuatro">Carpeta 4</a>
+            <p class="contenido_acordion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias vero dolorem voluptate at illum iure aliquid laborum possimus voluptatem ullam.</p>
+        </div>
+    </div>
+
+
+
 
 
 
