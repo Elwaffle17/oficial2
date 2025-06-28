@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Assens/css/style_productos.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+  <nav>
+    <div class="wrapper_nav">
+      <div class="logo3"><a href="#"><img src="../../Assens/img/owl.svg" alt=""></a></div>
+
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li>
+          <a href="../../paginas/Ofertas.html">Ofertas</a>
+        </li>
+        <li>
+          <a href="#" class="desktop-item">Productos</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="mobile-item">Productos</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <img src="../../MDMX_Feature_Card3_560X560.avif" alt="">
+              </div>
+    
+              <div class="row">
+                <header class="mega-header">Celulares</header>
+                <ul class="mega-links">
+                  <li>
+                    <a class="product-link" href="../../productos/Celulares/S.html">
+                      Galaxy S</a>
+                  </li>
+                  <li>
+                    <a class="product-link" href="../../productos/Celulares/A.html">
+                      Galaxy A</a>
+                  </li>
+                  <li>
+                    <a class="product-link" href="../../productos/Celulares/Z.html">
+                      Galaxy Z</a>
+                  </li>
+                  <li>
+                    <a class="product-link" href="../../productos/Celulares/M.html">
+                      Galaxy J</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="row">
+                <header class="mega-header">Tablets</header>
+                <ul class="mega-links">
+                  <li><a href="../../productos/Tablets/S.html">Galaxy Tab S</a></li>
+                  <li><a href="../../productos/Tablets/A.html">Galaxy Tab A</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header class="mega-header">Relojes</header>
+                <ul class="mega-links">
+                  <li><a href="../../productos/Relojes/Watch.html">Galaxy Watch</a></li>
+                  <li><a href="../../productos/Relojes/Watch_Ultra.html">Galaxy Watch Ultra</a></li>
+                  <li><a href="../../productos/Relojes/Watch_Classic.html">Galaxy Watch Classic</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="../../paginas/Sobre Nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="../../paginas/Contáctanos.html">Contáctanos</a></li>
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+
+
+   
+
+    <div class="container">
+           <div class="header">
+            <button id="search-icon-btn" class="search-icon-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+           </div>
+           <div id="search-wrapper" class="search-wrapper">
+            <input type="text" id="buscador" placeholder="Buscar en el sitio...">
+            <div id="resultados"></div>
+           </div>
+          </div>
+
+
+
+
+          <main>
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <div class="filter-group">
+                <label for="category-filter">Categoría:</label>
+                <select id="category-filter">
+                    <option value="all">Todas</option>
+                    <option value="electronics">Electrónica</option>
+                    <option value="clothing">Ropa</option>
+                    <option value="books">Libros</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price-filter">Precio máximo:</label>
+                <input type="range" id="price-filter" min="0" max="1000" value="1000">
+                <span id="price-value">$1000</span>
+            </div>
+            <button id="apply-filters">Aplicar Filtros</button>
+        </aside>
+
+        <section class="product-grid">
+            </section>
+    </main>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-product-image" src="" alt="Product Image">
+            <h2 id="modal-product-name"></h2>
+            <p id="modal-product-description"></p>
+            <p id="modal-product-price"></p>
+        </div>
+    </div>
+
+
+
+
+
+
+    
+
+	<a href="https://wa.me/+57 300672207" class="btn-wsp" target="_blank">
+	    <img class="icono_wsp" src="../../Assens/img/wsp/whatsapp-line.svg" alt="">
+	</a>
+
+	
+
+
+
+    
+
+
+  <div class="contenedor_acordeon">
+    <div class="acordeon">
+        <div class="acordeon-item">
+            <div class="acordeon-cabecera">
+                <h3>Productos</h3>
+                <span class="acordeon-icono">&#x276F;</span>
+            </div>
+            <div class="acordeon-contenido">
+                <ul>
+                  <li>
+                    <a href="../../productos/Celulares/Todo_Celulares.html">Celulares</a>
+                  </li>
+                  <li>
+                    <a href="../../productos/Tablets/S.html">Tablets</a>
+                  </li>
+                  <li>
+                    <a href="../../productos/Relojes/Reloj.html">Relojes</a>
+                  </li>
+                </ul>
+              </div>
+        </div>
+
+        <div class="acordeon-item">
+            <div class="acordeon-cabecera">
+                <h3>Tienda</h3>
+                <span class="acordeon-icono">&#x276F;</span>
+            </div>
+            <div class="acordeon-contenido">
+                <a href="../../paginas/Ofertas.html">Ofertas</a>
+            </div>
+        </div>
+
+        <div class="acordeon-item">
+            <div class="acordeon-cabecera">
+                <h3>Sobre Nosotros</h3>
+                <span class="acordeon-icono">&#x276F;</span>
+            </div>
+            <div class="acordeon-contenido">
+                <ul>
+                    <li><a href="../../paginas/Sobre Nosotros.html">Informacion de la compañia</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+  </div>
+
+   
+
+
+<script src="S.js"></script>
+<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+<Script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const products = [
+        { id: 1, name: 'Smartphone Pro', category: 'electronics', price: 699, image: 'https://via.placeholder.com/300x200?text=Smartphone', description: 'Un potente smartphone con cámara de alta resolución y batería duradera.' },
+        { id: 2, name: 'Camisa de Algodón', category: 'clothing', price: 29, image: '1000094025.png', description: 'Camisa de algodón 100% orgánico, cómoda y elegante.' },
+        { id: 3, name: 'Libro de Ciencia Ficción', category: 'books', price: 15, image: '1000094026.png', description: 'Una apasionante novela de ciencia ficción que te transportará a otros mundos.' },
+        { id: 4, name: 'Auriculares Inalámbricos', category: 'electronics', price: 120, image: 'https://via.placeholder.com/300x200?text=Auriculares', description: 'Auriculares con cancelación de ruido y sonido de alta fidelidad.' },
+        { id: 5, name: 'Jeans Slim Fit', category: 'clothing', price: 55, image: 'https://via.placeholder.com/300x200?text=Jeans', description: 'Jeans ajustados y modernos para cualquier ocasión.' },
+        { id: 6, name: 'Set de Lápices de Colores', category: 'books', price: 12, image: 'https://via.placeholder.com/300x200?text=Lapices', description: 'Un set vibrante de lápices de colores para artistas de todas las edades.' },
+        { id: 7, name: 'Smartwatch', category: 'electronics', price: 199, image: 'https://via.placeholder.com/300x200?text=Smartwatch', description: 'Un reloj inteligente con seguimiento de actividad y notificaciones.' },
+        { id: 8, name: 'Vestido de Verano', category: 'clothing', price: 45, image: 'https://via.placeholder.com/300x200?text=Vestido', description: 'Ligero y fresco vestido ideal para el verano.' },
+        { id: 9, name: 'Cámara Digital Compacta', category: 'electronics', price: 250, image: 'https://via.placeholder.com/300x200?text=Camara', description: 'Cámara fácil de usar con gran calidad de imagen para tus viajes.' },
+        { id: 10, name: 'Sudadera con Capucha', category: 'clothing', price: 35, image: 'https://via.placeholder.com/300x200?text=Sudadera', description: 'Sudadera cómoda y cálida, perfecta para el día a día.' },
+        { id: 11, name: 'Samsung', category: 'clothing', price: 35, image: 'https://via.placeholder.com/300x200?text=Sudadera', description: 'Sudadera cómoda y cálida, perfecta para el día a día.' },
+    ];
+
+    const productGrid = document.querySelector('.product-grid');
+    const categoryFilter = document.getElementById('category-filter');
+    const priceFilter = document.getElementById('price-filter');
+    const priceValueSpan = document.getElementById('price-value');
+    const applyFiltersButton = document.getElementById('apply-filters');
+
+    const productModal = document.getElementById('product-modal');
+    const closeModalButton = document.querySelector('.close-button');
+    const modalProductImage = document.getElementById('modal-product-image');
+    const modalProductName = document.getElementById('modal-product-name');
+    const modalProductDescription = document.getElementById('modal-product-description');
+    const modalProductPrice = document.getElementById('modal-product-price');
+
+    // Update price value display
+    priceFilter.addEventListener('input', () => {
+        priceValueSpan.textContent = `$${priceFilter.value}`;
+    });
+
+    // Function to render products
+    const renderProducts = (filteredProducts) => {
+        productGrid.innerHTML = ''; // Clear current products
+        filteredProducts.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.classList.add('product-card');
+            productCard.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>$${product.price}</p>
+            `;
+            productCard.addEventListener('click', () => showProductDetail(product));
+            productGrid.appendChild(productCard);
+        });
+    };
+
+    // Function to filter products
+    const applyFilters = () => {
+        const selectedCategory = categoryFilter.value;
+        const maxPrice = parseFloat(priceFilter.value);
+
+        const filtered = products.filter(product => {
+            const categoryMatch = selectedCategory === 'all' || product.category === selectedCategory;
+            const priceMatch = product.price <= maxPrice;
+            return categoryMatch && priceMatch;
+        });
+        renderProducts(filtered);
+    };
+
+    // Function to show product detail modal
+    const showProductDetail = (product) => {
+        modalProductImage.src = product.image;
+        modalProductImage.alt = product.name;
+        modalProductName.textContent = product.name;
+        modalProductDescription.textContent = product.description;
+        modalProductPrice.textContent = `$${product.price}`;
+        productModal.style.display = 'flex'; // Use flex to center the modal
+    };
+
+    // Close modal event listeners
+    closeModalButton.addEventListener('click', () => {
+        productModal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === productModal) {
+            productModal.style.display = 'none';
+        }
+    });
+
+    // Initial render of all products
+    renderProducts(products);
+
+    // Apply filters on button click
+    applyFiltersButton.addEventListener('click', applyFilters);
+});
+</Script>
+
+
+
+
+
+    <footer class="footer">
+        
+
+        <ul class="social-icon">
+          <li class="icon-elem">
+            <a href="" class="icon">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+          <li class="icon-elem">
+            <a href="" class="icon">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="icon-elem">
+            <a href="" class="icon">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+          <li class="icon-elem">
+            <a href="" class="icon">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li class="icon-elem">
+            <a href="" class="icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <p class="text">@Año | Todos los derechos reservados</p>
+      </footer>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      ></script>
+
+
+</body>
+</html>
