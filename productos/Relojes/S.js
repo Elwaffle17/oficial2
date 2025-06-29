@@ -1,19 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Seleccionamos todos los items del acordeón
 const items = document.querySelectorAll('.acordeon-item');
 
@@ -58,17 +43,17 @@ const paginas = [
     { titulo: 'Ofertas', url: '../../Ofertas.html' },
     { titulo: 'Productos', url: '../../Productos.html' },
 // Celulares
-    { titulo: 'Celulares', url: 'Todo_Celulares.html' },
-    { titulo: 'Samsung A', url: 'A.html' },
-    { titulo: 'Samsung S', url: 'S.html' },
-    { titulo: 'Samsung Z', url: 'Z.html' },
-    { titulo: 'Samsung M', url: 'M.html' },
+    { titulo: 'Celulares', url: '../Celulares/Todo_Celulares.html' },
+    { titulo: 'Samsung A', url: '../Celulares/A.html' },
+    { titulo: 'Samsung S', url: '../Celulares/S.html' },
+    { titulo: 'Samsung Z', url: '../Celulares/Z.html' },
+    { titulo: 'Samsung M', url: '../Celulares/M.html' },
 // Tablets
-    { titulo: 'Tablets', url: '../productos/Tablets/S.html' },
-    { titulo: 'Samsung Tab S', url: '../productos/Tablets/S.html' },
-    { titulo: 'Samsung Tab A', url: '../productos/Tablets/A.html' },
+    { titulo: 'Tablets', url: '../Tablets/S.html' },
+    { titulo: 'Samsung Tab S', url: '../Tablets/S.html' },
+    { titulo: 'Samsung Tab A', url: '../Tablets/A.html' },
 // Relojes
-    { titulo: 'Relojes', url: '../productos/Relojes/Reloj.html' },
+    { titulo: 'Relojes', url: 'Reloj.html' },
 ];
 
 // Obtenemos las referencias a los elementos del HTML
