@@ -724,18 +724,18 @@ footer{
 
 
 .cont_tarjetas_productos {
-  margin: 20px 0 10px 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 5px;
+  margin: 20px 10px 10px 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  gap: 10px;
 }
 
 .tarjeta {
   background-color: whitesmoke;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  margin: 10px;
+  padding: 40px 40px 20px 40px;
   text-align: center;
 }
 
@@ -753,19 +753,19 @@ h3 {
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 900px) {
   .cont_tarjetas_productos {
-  margin: 20px 0 10px 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 5px;
+  margin: 20px 10px 10px 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  gap: 10px;
 }
 
 .tarjeta {
   display: flex;
   align-items: center;
   padding: 20px;
-  margin: 5px;
   text-align: center;
 }
 
